@@ -5,7 +5,14 @@
 2. Run `npm run start` in the terminal to spin up a new session
     - Should create a QR code:
     - ![qr-example](https://user-images.githubusercontent.com/23458977/233207527-3e7b3f9e-99c1-491e-b93d-3fd4220b523e.png)
+    - **--> Alternatively you can run `npm run android` or `npm run ios` to target specific instance.**
 3. Scan QR code, now any local changes made to code will show up (hot-reloaded) on phone.
+
+---
+
+## *** To reload the app on local development: ***
+
+# Hit `r` on the terminal to refresh all bundles
 
 ---
 
