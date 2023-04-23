@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import { Button, StyleSheet, Text, TextInput, View, FlatList } from 'react-native';
+import { Button, StyleSheet, TextInput, View, FlatList } from 'react-native';
+
+import GoalItem from './components/GoalItem'
 
 const generateKey = () => new Date().toISOString() + Math.random().toString()
 
@@ -27,12 +29,8 @@ export default function App() {
       <View style={styles.goalsContainer}>
         <FlatList 
           data={courseGoals}
-          renderItem={itemData => (
-            <View style={styles.goalItem}>
-              <Text style={styles.goalText}>{itemData.item.text}</Text>
-            </View>
-          )}
-          keyExtractor={(item) => item.id} // Don't need this if the data had a `key` property
+          renderItem={itemData => (<GoalItem text={itemData.item.text} />)}
+          keyExtractor={(item, index) => item.id} // Don't need this if the data had a `key` property
           alwaysBounceVertical={false}
         />
       </View>
@@ -64,14 +62,5 @@ const styles = StyleSheet.create({
   },
   goalsContainer: {
     flex: 5
-  },
-  goalItem: {
-    margin: 8,
-    padding: 8,
-    borderRadius: 6,
-    backgroundColor: '#5e0acc',
-  },
-  goalText: {
-    color: 'white'
   }
 });
