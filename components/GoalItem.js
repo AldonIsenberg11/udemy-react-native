@@ -12,7 +12,7 @@ function GoalItem(props) {
             </Pressable>
         </View>
     )
-};
+}
 
 export default GoalItem;
 
