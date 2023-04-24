@@ -1,5 +1,7 @@
 
-## Testing on actual Phone (Android & IOs)
+# Use react-devtools to debug
+
+## Testing on real Phone (Android & IOs)
 
 1. Download [Expo Go](https://expo.dev/) from the app store on phone (android & IOS)
 2. Run `npm run start` in the terminal to spin up a new session
